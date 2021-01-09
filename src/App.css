@@ -42,4 +42,5 @@
 
 #searchContainer {
   margin-bottom: 20vh;
+  min-height: 90vh;
 }

@@ -6,8 +6,8 @@ import Search from "./components/search";
 function App() {
   return (
     <div className="App">
-      <section class="hero has-background-black-bis is-fullheight mb-4">
-        <div class="hero-head">
+      <section className="hero has-background-black-bis is-fullheight mb-4">
+        <div className="hero-head">
           <Appheader />
         </div>
 
