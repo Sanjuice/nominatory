@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import Nominees from "./nominees";
+
 import * as bulmaToast from "bulma-toast";
 
 class Search extends React.Component {
@@ -32,7 +33,7 @@ class Search extends React.Component {
   fetchMovies() {
     axios
       .get(
-        `http://www.omdbapi.com/?i=tt3896198&apikey=c7f6062c&s=${this.state.search}&plot=full`
+        `https://www.omdbapi.com/?i=tt3896198&apikey=c7f6062c&s=${this.state.search}&type=movie`
       )
       .then((res) => res.data)
       .then((res) => {
@@ -87,7 +88,7 @@ class Search extends React.Component {
           bulmaToast.toast({
             message: "You have reached the 5 nominee limit, thank you for your nominations",
             type: "is-danger",
-            duration: 6000,
+            duration: 4000,
             animate: { in: 'fadeInDownBig', out: 'fadeOutUpBig' }
           });
         }
@@ -133,12 +134,13 @@ class Search extends React.Component {
       <div>
         <div className="hero-body" id="searchContainer">
           <div className="container">
-            <h2 className="title has-text-white-ter">
+            <label className="label is-large has-text-white-ter" htmlFor="searchField">
               Search for a movie to nominate
-            </h2>
+            </label>
             <div className="field">
               <div className="control">
                 <input
+                  id="searchField"
                   className="input is-large is-rounded"
                   type="text"
                   placeholder="Search for movies..."
@@ -149,15 +151,14 @@ class Search extends React.Component {
 
             <div className="columns is-mobile is-multiline">
               {this.state.movieList === undefined ? (
-                <p>
-                  Couldn't find any movie. Please search again using another
-                  search criteria.
-                </p>
+                <div className="column">
+                  Couldn't find any movie with that title.
+                </div>
               ) : (
                 this.state.movieList.map((movie, i) => {
                   return (
-                    <div className="column is-one-fifth-desktop" key={i}>
-                      <div className="card">
+                    <div className="column is-one-fifth-desktop animate__animated animate__fadeIn" key={i}>
+                      <div className="card has-background-dark">
                         <div className="card-image">
                           <figure className="image is-3by4">
                             <img src={movie.Poster} alt="Placeholder" />
@@ -167,10 +168,10 @@ class Search extends React.Component {
                         <div className="card-content">
                           <div className="media">
                             <div className="media-content has-text-centered">
-                              <h4 className="title is-4 has-text-black">
+                              <h4 className="title is-4 has-text-white-bis">
                                 {movie.Title}
                               </h4>
-                              <h4 className="subtitle is-6 has-text-black">
+                              <h4 className="subtitle is-6 has-text-white-bis">
                                 {movie.Year}
                               </h4>
                               <button

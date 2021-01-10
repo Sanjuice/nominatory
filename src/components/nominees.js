@@ -1,23 +1,10 @@
 import React from "react";
+import 'animate.css';
 
 class Nominees extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      nominee: [],
-    };
-  }
 
   handleChange(el) {
     this.props.delete(el);
-  }
-
-  componentDidMount() {
-    const arr = [];
-    arr.push(this.props);
-    this.setState({
-      nominee: arr,
-    });
   }
 
   render() {
