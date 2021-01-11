@@ -31,14 +31,14 @@ Here are screenshots of the application:
 ### Desktop layout
 #### Desktop view without nominations
 ![Desktop view without nominations](desktop1.png)\
-\
+
 #### Desktop view with nominations
 ![Desktop view with nominations](desktop2.png)
 
 ### Mobile Layout
 #### Mobie view without nominations
 ![Mobile view without nominations](mobile1.png)\
-\
+
 #### Mobie view without nominations
 ![Mobile view with nominations](mobile2.png)
 
