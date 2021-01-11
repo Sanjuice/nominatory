@@ -2,8 +2,7 @@ import "./App.css";
 import "./components/app-header";
 import Appheader from "./components/app-header";
 import Search from "./components/search";
-import 'animate.css';
-
+import "animate.css";
 
 function App() {
   return (
@@ -13,8 +12,7 @@ function App() {
           <Appheader />
         </div>
 
-          <Search />
-        
+        <Search />
       </section>
     </div>
   );

@@ -4,18 +4,18 @@ import Nominees from "./nominees";
 
 import * as bulmaToast from "bulma-toast";
 
+//component to search for movies, display results and nomination list
 class Search extends React.Component {
   constructor() {
     super();
     this.state = {
-      movieData: {},
-      search: "little women",
-      movieList: [],
-      nomineeList: [],
+      movieData: {}, //stores the json object provided by the omdb api
+      search: "little women", //stores the search term inputed by the user, default: little women
+      movieList: [], //stores the movies recieved from omdb api with nomination data 
+      nomineeList: [], //stores the nominations made by the user
     };
 
-    this.removalMovie = {};
-
+    //event listener to change results padding based on window sizing changes
     window.addEventListener("resize", this.paddingChange);
   }
 
@@ -30,6 +30,7 @@ class Search extends React.Component {
 
   }
 
+  //fetch movies based on user input
   fetchMovies() {
     axios
       .get(
@@ -50,6 +51,7 @@ class Search extends React.Component {
     });
   }
 
+  //set nomination based on user input on the search results
   setNomination() {
     if (this.state.movieList !== undefined) {
       const movies = this.state.movieList.map((movie) => {
@@ -69,6 +71,7 @@ class Search extends React.Component {
     }
   }
 
+  //add nominations to the nomination list and update the movielist to show nomination changes
   addNominee(event, movie) {
     const updatenom = [...this.state.nomineeList, movie];
     const updatemovies = this.state.movieList.map((element) => {
@@ -97,9 +100,9 @@ class Search extends React.Component {
       event.target.disabled = true;
       
     }
-    
   }
 
+  //Change padding of the results based on the footer of the webpage
   paddingChange() {
     const styles = window.getComputedStyle(document.querySelector("footer"));
     document.getElementById(
@@ -107,6 +110,7 @@ class Search extends React.Component {
     ).style.marginBottom = styles.getPropertyValue("height");
   }
 
+  //remove nominee from the nomination list based on the user input from the nominee component
   removeNominee = (movie) => {
     const updatenom = this.state.nomineeList.filter(
       (element) => (element.Title !== movie.Title || movie.Year !== element.Year)

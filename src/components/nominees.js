@@ -1,6 +1,7 @@
 import React from "react";
 import 'animate.css';
 
+//component to desplay the individual nominees of the user nomination list
 class Nominees extends React.Component {
 
   handleChange(el) {
