@@ -2,7 +2,7 @@
 
 This is a project created as a solution to the Shopify challenge for a front-end developer position. The challenge was to create a webpage that can search OMDB for movies, and allow the user to save their favourite films they feel should be up for nomination. When they've selected 5 nominees they should be notified they're finished. The title of the challenge is 'The Shoppies: Movie Awards for Entrepreneurs'.
 
-The demo for the project can be founde here: [The Shoppies](https://eager-yalow-a4d447.netlify.app/)
+The demo for the project can be found here: [The Shoppies](https://eager-yalow-a4d447.netlify.app/)
 
 These were the technical requirements of the application:
 * Search results should come from OMDB's API.
@@ -29,10 +29,10 @@ Frameworks and libraries used to build this project are:
 Here are screenshots of the application: 
 
 ### Desktop layout
-![Desktop view without nominations](screenshots\desktop1.png)
-![Desktop view with nominations](screenshots\desktop2.png)
+![Desktop view without nominations](desktop1.png)
+![Desktop view with nominations](desktop2.png)
 
 ### Mobile Layout
-![Mobile view without nominations](screenshots\mobile1.png)
-![Mobile view with nominations](screenshots\mobile2.png)
+![Mobile view without nominations](mobile1.png)
+![Mobile view with nominations](mobile2.png)
 
