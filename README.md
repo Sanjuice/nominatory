@@ -29,10 +29,12 @@ Frameworks and libraries used to build this project are:
 Here are screenshots of the application: 
 
 ### Desktop layout
-![Desktop view without nominations](desktop1.png)
+![Desktop view without nominations](desktop1.png)\
+\
 ![Desktop view with nominations](desktop2.png)
 
 ### Mobile Layout
 ![Mobile view without nominations](mobile1.png)
+\
 ![Mobile view with nominations](mobile2.png)
 
